@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">HeroDaggerHilt</string>
+    <string name="error_api">Error al obtener el listado de Superheroes</string>
+    <string name="error_connection">Error de conexión</string>
+    <string name="name">Name</string>
+    <string name="aliases">Aliases</string>
+    <string name="alter_egos">Alter egos</string>
+    <string name="occupation">Occupation</string>
+    <string name="group_affiliation">Group affiliation</string>
+    <string name="alignment">Alignment</string>
+    <string name="hero_image">Hero image</string>
+    <string name="info">Info</string>
+    <string name="stats">Stats</string>
+    <string name="search">search</string>
+
+    <string-array name="stats_names">
+        <item>Combat</item>
+        <item>Durability</item>
+        <item>Intelligence</item>
+        <item>Power</item>
+        <item>Speed</item>
+        <item>Strength</item>
+    </string-array>
+</resources>
