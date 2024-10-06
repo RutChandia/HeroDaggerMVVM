@@ -24,6 +24,9 @@ class HeroViewModel @Inject constructor(
     private val _superHeroesMap = MutableStateFlow<Map<Int, SuperHero>>(emptyMap())
     val superHeroesMap: StateFlow<Map<Int, SuperHero>> = _superHeroesMap
 
+    private val _selectedHero = MutableStateFlow<SuperHero?>(null)
+    val selectedHero: StateFlow<SuperHero?> = _selectedHero
+
     init {
         getSuperHeroes()
     }
@@ -42,8 +45,11 @@ class HeroViewModel @Inject constructor(
     }
 
     private fun updateSuperHeroMap(superHeroList: List<SuperHero>) {
-        // Convierte la lista en un map con el ID como clave
         val superHeroMap = superHeroList.associateBy { it.id }
         _superHeroesMap.value = superHeroMap
+    }
+
+    fun selectHeroById(heroId: Int) {
+        _selectedHero.value = _superHeroesMap.value[heroId]
     }
 }

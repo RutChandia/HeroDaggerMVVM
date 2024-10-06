@@ -1,27 +1,25 @@
 package cl.noemi.herodaggerhilt.presentation.navgraph
 
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import cl.noemi.herodaggerhilt.presentation.screens.DetailsScreen
 import cl.noemi.herodaggerhilt.presentation.screens.MainScreen
+import cl.noemi.herodaggerhilt.presentation.viewmodel.HeroViewModel
 
 @Composable
 fun HeroNav(
-    navController: NavHostController = rememberNavController()
+    viewModel: HeroViewModel = hiltViewModel(), navController: NavHostController = rememberNavController()
 ) {
     NavHost(navController = navController, startDestination = "mainScreen") {
-        composable("mainScreen") { MainScreen(navController) }
+        composable("mainScreen") { MainScreen(navController, viewModel) }
         composable(
-            "detailsScreen/{heroId}",
-            arguments = listOf(navArgument("heroId") { type = NavType.IntType })
-        ) { backStackEntry ->
-            val heroId = backStackEntry.arguments?.getInt("heroId") ?: -1
-            DetailsScreen(heroId = heroId)
+            "detailsScreen"
+        ) {
+            DetailsScreen(viewModel = viewModel)
         }
     }
 }

@@ -30,19 +30,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.AsyncImage
 import cl.noemi.herodaggerhilt.R
 import cl.noemi.herodaggerhilt.domain.model.SuperHero
 import cl.noemi.herodaggerhilt.presentation.components.TableInfo
 import cl.noemi.herodaggerhilt.presentation.viewmodel.HeroViewModel
+import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 
 @Composable
-fun DetailsScreen(heroId: Int, viewModel: HeroViewModel = hiltViewModel()) {
-    val superHeroesState by viewModel.superHeroesMap.collectAsState()
-
-    val superHero = superHeroesState[heroId]
+fun DetailsScreen(viewModel: HeroViewModel) {
+    val superHero by viewModel.selectedHero.collectAsState()
     DetailsScreenTabs(hero = superHero)
 }
 

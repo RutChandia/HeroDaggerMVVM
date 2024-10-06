@@ -40,8 +40,11 @@ fun MainScreen(
         CenteredProgressIndicator()
     } else {
         MainScreenContent(
-            navController = navController,
-            superHeroesMap = superHeroes.value
+            superHeroesMap = superHeroes.value,
+            onHeroSelected = { heroId ->
+                viewModel.selectHeroById(heroId)
+                navController.navigate("detailsScreen")
+            }
         )
     }
 
@@ -50,7 +53,7 @@ fun MainScreen(
 @Composable
 private fun MainScreenContent(
     superHeroesMap: Map<Int, SuperHero>,
-    navController: NavController
+    onHeroSelected: (Int) -> Unit
 ) {
     val superHeroes = superHeroesMap.values.toList()
     var searchText by remember { mutableStateOf("") }
@@ -77,7 +80,7 @@ private fun MainScreenContent(
         LazyVerticalGrid(columns = GridCells.Fixed(2), content = {
             items(filteredSuperHeroes) {
                 CardView(superHero = it, onItemClick = { heroId ->
-                    navController.navigate("detailsScreen/$heroId")
+                    onHeroSelected(heroId)
                 })
             }
         })
