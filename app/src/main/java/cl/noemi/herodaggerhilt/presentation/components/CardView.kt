@@ -20,9 +20,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
 import cl.noemi.herodaggerhilt.R
 import cl.noemi.herodaggerhilt.domain.model.SuperHero
+import coil.compose.AsyncImage
 
 @Composable
 fun CardView(superHero: SuperHero, onItemClick: (Int) -> Unit) {

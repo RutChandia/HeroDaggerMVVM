@@ -4,8 +4,8 @@ import cl.noemi.herodaggerhilt.data.network.ApiResponseState
 import cl.noemi.herodaggerhilt.data.network.ApiServiceHero
 import cl.noemi.herodaggerhilt.data.network.doNetworkCall
 import cl.noemi.herodaggerhilt.domain.mapper.HeroMapper
-import cl.noemi.herodaggerhilt.domain.repository.HeroRepository
 import cl.noemi.herodaggerhilt.domain.model.SuperHero
+import cl.noemi.herodaggerhilt.domain.repository.HeroRepository
 import javax.inject.Inject
 
 class HeroRepositoryImpl @Inject constructor(

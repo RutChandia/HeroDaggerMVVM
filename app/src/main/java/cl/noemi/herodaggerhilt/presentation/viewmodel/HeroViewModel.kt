@@ -27,8 +27,10 @@ class HeroViewModel @Inject constructor(
     private val _selectedHero = MutableStateFlow<SuperHero?>(null)
     val selectedHero: StateFlow<SuperHero?> = _selectedHero
 
-    init {
-        getSuperHeroes()
+    fun loadSuperHeroes() {
+        if (!_isLoading.value) {
+            getSuperHeroes()
+        }
     }
 
     private fun getSuperHeroes() {

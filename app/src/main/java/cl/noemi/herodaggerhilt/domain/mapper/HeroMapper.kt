@@ -1,8 +1,8 @@
 package cl.noemi.herodaggerhilt.domain.mapper
 
-import cl.noemi.herodaggerhilt.domain.model.SuperHero
 import cl.noemi.herodaggerhilt.data.dto.HeroDTO
 import cl.noemi.herodaggerhilt.domain.model.Powerstats
+import cl.noemi.herodaggerhilt.domain.model.SuperHero
 
 class HeroMapper {
     fun dtoToSuperHero(listDTO: List<HeroDTO>): List<SuperHero> {
