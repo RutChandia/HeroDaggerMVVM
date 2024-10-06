@@ -18,6 +18,9 @@ El proyecto sigue el patrón de arquitectura MVVM:
 
 ## Capturas de Pantalla
 <img src="assets/HDMVVM-search.jpg" alt="search">
+
 <img src="assets/HDHMVVM-info.jpg.jpg" alt="info">
+
 <img src="assets/HDHMVVM-details.jpg.jpg" alt="details">
+
 <img src="assets/HDHMVVM-stats.jpg.jpg" alt="stats">
