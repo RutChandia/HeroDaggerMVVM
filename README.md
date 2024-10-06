@@ -17,10 +17,9 @@ El proyecto sigue el patrón de arquitectura MVVM:
 - **View**: Interfaz de usuario creada con Jetpack Compose.
 
 ## Capturas de Pantalla
-<img src="assets/HDMVVM-search.jpg" alt="search">
-
-<img src="assets/HDHMVVM-info.jpg" alt="info">
-
-<img src="assets/HDHMVVM-details.jpg" alt="details">
-
-<img src="assets/HDHMVVM-stats.jpg" alt="stats">
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="assets/HDMVVM-search.jpg" alt="search" width="258">
+    <img src="assets/HDHMVVM-info.jpg" alt="info" width="258">
+    <img src="assets/HDHMVVM-details.jpg" alt="details" width="269">
+    <img src="assets/HDHMVVM-stats.jpg" alt="stats" width="268">
+</div>
