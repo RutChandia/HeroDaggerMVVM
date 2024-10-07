@@ -13,7 +13,7 @@ HeroDaggerHilt es una aplicación móvil desarrollada en Kotlin, que utiliza las
 
 El proyecto sigue el patrón de arquitectura MVVM:
 - **Model**: Gestión de los datos y la lógica de negocio.
-- **ViewModel**: Manejo de los estados de UI y side-effects.
+- **ViewModel**: Manejo de los estados de UI.
 - **View**: Interfaz de usuario creada con Jetpack Compose.
 
 ## Capturas de Pantalla
